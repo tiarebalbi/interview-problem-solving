@@ -50,5 +50,6 @@ Write a function maxDuffelBagValue() that takes an array of cake type objects an
     2018-11-07 11:25:09 INFO  TheCakeThief:44 - maxDuffelBagValue: 555 with a capacity of 20 with cakes [Cake(weight=7, worth=160), Cake(weight=3, worth=90), Cake(weight=2, worth=15)]
     2018-11-07 11:25:09 INFO  TheCakeThief:44 - maxDuffelBagValue: 3000 with a capacity of 100 with cakes [Cake(weight=1, worth=30), Cake(weight=50, worth=200)]
     2018-11-07 11:25:09 INFO  TheCakeThief:44 - maxDuffelBagValue: 110 with a capacity of 8 with cakes [Cake(weight=3, worth=40), Cake(weight=5, worth=70)]
-    2018-11-07 11:25:09 INFO  TheCakeThief:44 - maxDuffelBagValue: 120 with a capacity of 9 with cakes [Cake(weight=3, worth=40), Cake(weight=5, worth=70)] 
+    2018-11-07 11:25:09 INFO  TheCakeThief:44 - maxDuffelBagValue: 120 with a capacity of 9 with cakes [Cake(weight=3, worth=40), Cake(weight=5, worth=70)]
+     
 ---
