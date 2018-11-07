@@ -4,7 +4,6 @@ Sample Questions usually presented during interviews to check your problem solvi
 
 [![CircleCI](https://circleci.com/gh/tiarebalbi/interview-problem-solving.svg?style=svg)](https://circleci.com/gh/tiarebalbi/interview-problem-solving)
 [![Maintainability](https://api.codeclimate.com/v1/badges/26736da8025b65f457f4/maintainability)](https://codeclimate.com/github/tiarebalbi/interview-problem-solving/maintainability)
-
 ---
 
 ## The Two Egg Problem
