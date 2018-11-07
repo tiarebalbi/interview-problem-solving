@@ -14,10 +14,10 @@ import org.apache.log4j.Logger
 
 class TwoEggProblem constructor(
   val numberOfFloors: Int,
-  val theSafeFloorToDrop: Int = (1..numberOfFloors).random()
+  val theSafeFloorToDrop: Int
 ) {
 
-  private val logger = Logger.getLogger("TwoEggProblem")
+  private val logger = Logger.getLogger(TwoEggProblem::class.java)
   private val floors: List<Int> = IntRange(1, numberOfFloors).toList().sorted()
 
   private val firstEgg: MutableList<Int> = mutableListOf()
