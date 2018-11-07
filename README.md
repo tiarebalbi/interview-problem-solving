@@ -11,7 +11,7 @@ Sample Questions usually presented during interviews to check your problem solvi
 If an egg is dropped from above that floor, it will break. If it is dropped from that floor or below, it will be completely undamaged and you can drop the egg again.
 Given two eggs, find the highest floor an egg can be dropped from without breaking, with as few drops as possible.
 
-[Source Code](com/tiarebalbi/interview/problem1)
+[Source Code](src/com/tiarebalbi/interview/problem1)
 
 #### Output:
 
