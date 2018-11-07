@@ -8,4 +8,23 @@
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-rootProject.name = 'interview-problem-solving'
+package com.tiarebalbi.interview.algorithms
+
+import org.junit.jupiter.api.Assertions
+import org.junit.jupiter.params.ParameterizedTest
+import org.junit.jupiter.params.provider.CsvSource
+
+class BinarySearchTest {
+
+  @ParameterizedTest(name = "{0} between {1} and {2} to be {3}")
+  @CsvSource(
+    "30,    1,   100,  true",
+    "89,    1,   100,  true",
+    "189,   1,   100,  false"
+  )
+  fun `should be able to find value in the list`(expectedValue: Int, lowestNumber: Int, highestNumber: Int, verification: Boolean) {
+    val data = (lowestNumber..highestNumber).toList()
+    val result = BinarySearch.search(data, expectedValue, lowestNumber, highestNumber)
+    Assertions.assertEquals(verification, result == expectedValue)
+  }
+}

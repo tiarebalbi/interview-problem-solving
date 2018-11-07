@@ -8,4 +8,28 @@
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-rootProject.name = 'interview-problem-solving'
+package com.tiarebalbi.interview.problem1
+
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.params.ParameterizedTest
+import org.junit.jupiter.params.provider.CsvSource
+
+class TwoEggProblemTest {
+
+  @ParameterizedTest(name = "Floors {0} with safe floor {1} = {2}")
+  @CsvSource(
+    "100,   13,   13",
+    "100,   98,   98",
+    "10000, 5200, 5200",
+    "10000, 9200, 9200"
+  )
+  fun `should be able to detect expected value`(floors: Int, expectedFloor: Int, floorNumber: Int) {
+    val problem = TwoEggProblem(
+      numberOfFloors = floors,
+      theSafeFloorToDrop = expectedFloor
+    )
+
+    val result = problem.whichFloorIsSafeToDropTheEgg()
+    assertEquals(result, floorNumber)
+  }
+}
