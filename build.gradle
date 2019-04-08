@@ -53,5 +53,5 @@ dependencies {
     compile 'log4j:log4j:1.2.17'
     testCompile("org.junit.jupiter:junit-jupiter-params:5.4.0")
     testCompile("org.junit.jupiter:junit-jupiter-api:5.4.0")
-    testRuntime("org.junit.jupiter:junit-jupiter-engine:5.4.0")
+    testRuntime("org.junit.jupiter:junit-jupiter-engine:5.4.2")
 }
