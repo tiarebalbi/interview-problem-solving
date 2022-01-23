@@ -15,7 +15,7 @@ implementations produce a stable sort, which means that the order of equal eleme
 
 **Reference:** [Link](src/main/kotlin/com/tiarebalbi/interview/algorithms/MergeSort.kt)
 
-## Binary Search
+### Binary Search
 
 In computer science, binary search, also known as half-interval search, logarithmic search, or binary chop, is a search
 algorithm that finds the position of a target value within a sorted array. Binary search compares the target value to
