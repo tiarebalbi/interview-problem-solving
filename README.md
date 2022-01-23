@@ -15,6 +15,14 @@ implementations produce a stable sort, which means that the order of equal eleme
 
 **Reference:** [Link](src/main/kotlin/com/tiarebalbi/interview/algorithms/MergeSort.kt)
 
+### Quick Sort
+
+Quicksort is an in-place sorting algorithm. Developed by British computer scientist Tony Hoare in 1959 and published in
+1961, it is still a commonly used algorithm for sorting. When implemented well, it can be somewhat faster than merge
+sort and about two or three times faster than heapsort.
+
+**Reference:** [Link](src/main/kotlin/com/tiarebalbi/interview/algorithms/QuickSort.kt)
+
 ### Binary Search
 
 In computer science, binary search, also known as half-interval search, logarithmic search, or binary chop, is a search

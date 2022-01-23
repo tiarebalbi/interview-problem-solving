@@ -4,10 +4,8 @@ import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.CsvSource
-import java.time.Duration
 import kotlin.system.measureNanoTime
 import kotlin.time.Duration.Companion.nanoseconds
-import kotlin.time.toKotlinDuration
 
 class MergeSortTest {
 
@@ -20,6 +18,7 @@ class MergeSortTest {
 
         assertTrue { expected.contentEquals(result) }
     }
+
     @ParameterizedTest(name = "Sort input numbers between {0} and {1} using mergeSort")
     @CsvSource(
         "1,   1000",
