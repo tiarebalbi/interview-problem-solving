@@ -11,6 +11,6 @@
 package com.tiarebalbi.interview.problem2
 
 data class Cake(
-  val weight: Int,
-  val worth: Int
+    val weight: Int,
+    val worth: Int,
 )

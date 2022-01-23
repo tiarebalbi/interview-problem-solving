@@ -10,39 +10,40 @@
 
 package com.tiarebalbi.interview.problem2
 
-import org.apache.log4j.Logger
+import org.apache.logging.log4j.LogManager
+import kotlin.math.max
 
 /**
  * The Cake Thief
  *
  * @author Tiare Balbi Bonamini
  */
-class TheCakeThief constructor(private val cakes: Array<Cake>, private val capacity: Int){
+class TheCakeThief constructor(private val cakes: Array<Cake>, private val capacity: Int) {
 
-  private val logger = Logger.getLogger(TheCakeThief::class.java)
+    private val logger = LogManager.getLogger()
 
-  fun maxDuffelBagValue(): Int {
-    val maxValueAtCapacity = IntArray(capacity + 1)
+    fun maxDuffelBagValue(): Int {
+        val maxValueAtCapacity = IntArray(capacity + 1)
 
-    for (i in 0..capacity) {
-      var currentMaxValue = 0
+        for (i in 0..capacity) {
+            var currentMaxValue = 0
 
-      for (j in cakes.indices) {
-        val cake = cakes[j]
-        if (cake.weight <= i) {
-          val maxValueUsingCake = cake.worth + maxValueAtCapacity[i - cake.weight]
+            for (j in cakes.indices) {
+                val cake = cakes[j]
+                if (cake.weight <= i) {
+                    val maxValueUsingCake = cake.worth + maxValueAtCapacity[i - cake.weight]
 
-          currentMaxValue = Math.max(maxValueUsingCake, currentMaxValue)
+                    currentMaxValue = max(maxValueUsingCake, currentMaxValue)
+                }
+            }
+
+            maxValueAtCapacity[i] = currentMaxValue
         }
-      }
 
-      maxValueAtCapacity[i] = currentMaxValue
+        val result = maxValueAtCapacity[capacity]
+
+        logger.info("maxDuffelBagValue: $result with a capacity of $capacity with cakes ${cakes.toList()}")
+
+        return result
     }
-
-    val result = maxValueAtCapacity[capacity]
-
-    logger.info("maxDuffelBagValue: $result with a capacity of $capacity with cakes ${cakes.toList()}")
-
-    return result
-  }
 }

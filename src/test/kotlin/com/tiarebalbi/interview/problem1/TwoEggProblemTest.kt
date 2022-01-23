@@ -16,20 +16,20 @@ import org.junit.jupiter.params.provider.CsvSource
 
 class TwoEggProblemTest {
 
-  @ParameterizedTest(name = "Floors {0} with safe floor {1} = {2}")
-  @CsvSource(
-    "100,   13,   13",
-    "100,   98,   98",
-    "10000, 5200, 5200",
-    "10000, 9200, 9200"
-  )
-  fun `should be able to detect expected value`(floors: Int, expectedFloor: Int, floorNumber: Int) {
-    val problem = TwoEggProblem(
-      numberOfFloors = floors,
-      theSafeFloorToDrop = expectedFloor
+    @ParameterizedTest(name = "Floors {0} with safe floor {1} = {2}")
+    @CsvSource(
+        "100,   13,   13",
+        "100,   98,   98",
+        "10000, 5200, 5200",
+        "10000, 9200, 9200"
     )
+    fun `should be able to detect expected value`(floors: Int, expectedFloor: Int, floorNumber: Int) {
+        val problem = TwoEggProblem(
+            numberOfFloors = floors,
+            theSafeFloorToDrop = expectedFloor
+        )
 
-    val result = problem.whichFloorIsSafeToDropTheEgg()
-    assertEquals(result, floorNumber)
-  }
+        val result = problem.whichFloorIsSafeToDropTheEgg()
+        assertEquals(result, floorNumber)
+    }
 }

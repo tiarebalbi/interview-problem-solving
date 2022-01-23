@@ -24,16 +24,20 @@ import java.util.Collections
  * @see Collections.binarySearch
  */
 object BinarySearch {
-  private const val NOT_FOUND = -1
+    private const val NOT_FOUND = -1
 
-  fun search(data: List<Int>, expectedValue: Int, lowestNumber: Int, highestNumber: Int): Int {
-    if (highestNumber < lowestNumber || expectedValue > highestNumber) return NOT_FOUND
+    fun search(data: List<Int>, expectedValue: Int, lowestNumber: Int, highestNumber: Int): Int {
+        if (highestNumber < lowestNumber || expectedValue > highestNumber) return NOT_FOUND
+        if (expectedValue < lowestNumber) return NOT_FOUND
 
-    val middle = (lowestNumber + highestNumber) / 2
-    return when {
-      expectedValue == data[middle] -> data[middle]
-      expectedValue < data[middle] -> search(data, expectedValue, lowestNumber, middle - 1)
-      else -> search(data, expectedValue, middle + 1, highestNumber)
+        val middle = (lowestNumber + highestNumber) / 2
+
+        println("Searching $expectedValue between $lowestNumber until $highestNumber (middle: $middle, data: ${data[middle]})")
+
+        return when {
+            expectedValue == data[middle] -> data[middle]
+            expectedValue < data[middle] -> search(data, expectedValue, lowestNumber, middle - 1)
+            else -> search(data, expectedValue, middle + 1, highestNumber)
+        }
     }
-  }
 }

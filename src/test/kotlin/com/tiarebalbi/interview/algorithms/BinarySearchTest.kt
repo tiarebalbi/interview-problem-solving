@@ -16,15 +16,18 @@ import org.junit.jupiter.params.provider.CsvSource
 
 class BinarySearchTest {
 
-  @ParameterizedTest(name = "{0} between {1} and {2} to be {3}")
-  @CsvSource(
-    "30,    1,   100,  true",
-    "89,    1,   100,  true",
-    "189,   1,   100,  false"
-  )
-  fun `should be able to find value in the list`(expectedValue: Int, lowestNumber: Int, highestNumber: Int, verification: Boolean) {
-    val data = (lowestNumber..highestNumber).toList()
-    val result = BinarySearch.search(data, expectedValue, lowestNumber, highestNumber)
-    Assertions.assertEquals(verification, result == expectedValue)
-  }
+    @ParameterizedTest(name = "{0} between {1} and {2} to be {3}")
+    @CsvSource(
+        "30,    0,   100,  true",
+        "89,    0,   20000,  true",
+        "189,   0,   100,  false",
+        "189,   200,   1000,  false"
+    )
+    fun `should be able to find value in the list`(expectedValue: Int, lowestNumber: Int, highestNumber: Int, verification: Boolean) {
+        val data = (lowestNumber until highestNumber).toList()
+
+        val result = BinarySearch.search(data, expectedValue, lowestNumber, highestNumber)
+
+        Assertions.assertEquals(verification, result == expectedValue)
+    }
 }
