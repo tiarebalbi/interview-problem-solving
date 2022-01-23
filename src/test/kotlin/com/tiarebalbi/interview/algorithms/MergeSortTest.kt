@@ -22,7 +22,7 @@ class MergeSortTest {
     @ParameterizedTest(name = "Sort input numbers between {0} and {1} using mergeSort")
     @CsvSource(
         "1,   1000",
-        "1,   10000",
+        "-1000,   1000",
         "1,   100000"
     )
     fun `should sort large random array`(from: Int, to: Int) {

@@ -11,7 +11,7 @@ class QuickSortTest {
     @ParameterizedTest(name = "Sort input numbers between {0} and {1} using quickSort")
     @CsvSource(
         "1,   1000",
-        "1,   10000",
+        "-1000,   1000",
         "1,   100000"
     )
     fun `should sort array of integers using quicksort`(from: Int, to: Int) {
