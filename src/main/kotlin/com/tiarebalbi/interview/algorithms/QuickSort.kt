@@ -2,15 +2,15 @@ package com.tiarebalbi.interview.algorithms
 
 object QuickSort {
 
-    fun quickSort(input: IntArray, leftIndex: Int, rightIndex: Int): IntArray {
+    fun sort(input: IntArray, leftIndex: Int, rightIndex: Int): IntArray {
         if (leftIndex >= rightIndex) {
             return input
         }
 
         val partition: Int = createPartition(input, leftIndex, rightIndex)
 
-        quickSort(input, leftIndex, partition - 1)
-        quickSort(input, partition + 1, rightIndex)
+        sort(input, leftIndex, partition - 1)
+        sort(input, partition + 1, rightIndex)
 
         return input
     }

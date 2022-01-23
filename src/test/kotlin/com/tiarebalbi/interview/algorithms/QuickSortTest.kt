@@ -19,7 +19,7 @@ class QuickSortTest {
         val expected = (from until to).sorted().toIntArray()
 
         val totalTime = measureNanoTime {
-            val result = QuickSort.quickSort(input, 0, input.size - 1)
+            val result = QuickSort.sort(input, 0, input.size - 1)
             Assertions.assertTrue { expected.contentEquals(result) }
         }
 
