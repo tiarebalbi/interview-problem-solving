@@ -24,9 +24,7 @@ class MergeSortTest {
     @CsvSource(
         "1,   1000",
         "1,   10000",
-        "1,   100000",
-        "1,   1000000",
-        "1,   10000000",
+        "1,   100000"
     )
     fun `should sort large random array`(from: Int, to: Int) {
         val input = (from until to).shuffled().toIntArray()
