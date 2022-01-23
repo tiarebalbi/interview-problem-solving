@@ -1,17 +1,37 @@
 # Interview Problem Solving
 
-Sample Questions usually presented during interviews to check your problem solving skills. 
+Sample Questions usually presented during interviews to check your problem solving skills.
 
 ![Gradle Run](https://github.com/tiarebalbi/interview-problem-solving/workflows/Gradle%20Run/badge.svg)
 [![Maintainability](https://api.codeclimate.com/v1/badges/26736da8025b65f457f4/maintainability)](https://codeclimate.com/github/tiarebalbi/interview-problem-solving/maintainability)
 ---
 
-## The Two Egg Problem
+## Algorithms
+
+### Merge Sort
+
+In computer science, merge sorts is an efficient, general-purpose, and comparison-based sorting algorithm. Most
+implementations produce a stable sort, which means that the order of equal elements is the same in the input and output.
+
+**Reference:** [Link](src/main/kotlin/com/tiarebalbi/interview/algorithms/MergeSort.kt)
+
+## Binary Search
+
+In computer science, binary search, also known as half-interval search, logarithmic search, or binary chop, is a search
+algorithm that finds the position of a target value within a sorted array. Binary search compares the target value to
+the middle element of the array.
+
+**Reference:** [Link](src/main/kotlin/com/tiarebalbi/interview/algorithms/BinarySearch.kt)
+
+-----
+
+## The Two Egg Problems
 
 ### A building has 100 floors. One of the floors is the highest floor an egg can be dropped from without breaking.
 
-If an egg is dropped from above that floor, it will break. If it is dropped from that floor or below, it will be completely undamaged and you can drop the egg again.
-Given two eggs, find the highest floor an egg can be dropped from without breaking, with as few drops as possible.
+If an egg is dropped from above that floor, it will break. If it is dropped from that floor or below, it will be
+completely undamaged and you can drop the egg again. Given two eggs, find the highest floor an egg can be dropped from
+without breaking, with as few drops as possible.
 
 [Source Code](https://github.com/tiarebalbi/interview-problem-solving/blob/master/src/main/kotlin/com/tiarebalbi/interview/problem1)
 
@@ -32,7 +52,7 @@ Given two eggs, find the highest floor an egg can be dropped from without breaki
 
 ### You are a renowned thief who has recently switched from stealing precious metals to stealing cakes because of the insane profit margins. You end up hitting the jackpot, breaking into the world’s largest privately owned stock of cakes—the vault of the Queen of England.
 
-While Queen Elizabeth has a limited number of types of cake, she has an unlimited supply of each type. 
+While Queen Elizabeth has a limited number of types of cake, she has an unlimited supply of each type.
 
 Each type of cake has a weight and a value, stored in an object with two properties:
 
@@ -41,7 +61,8 @@ Each type of cake has a weight and a value, stored in an object with two propert
 
 You brought a duffel bag that can hold limited weight, and you want to make off with the most valuable haul possible.
 
-Write a function maxDuffelBagValue() that takes an array of cake type objects and a weight capacity, and returns the maximum monetary value the duffel bag can hold.
+Write a function maxDuffelBagValue() that takes an array of cake type objects and a weight capacity, and returns the
+maximum monetary value the duffel bag can hold.
 
 [Source Code](https://github.com/tiarebalbi/interview-problem-solving/blob/master/src/main/kotlin/com/tiarebalbi/interview/problem2)
 
@@ -51,5 +72,6 @@ Write a function maxDuffelBagValue() that takes an array of cake type objects an
     2018-11-07 11:25:09 INFO  TheCakeThief:44 - maxDuffelBagValue: 3000 with a capacity of 100 with cakes [Cake(weight=1, worth=30), Cake(weight=50, worth=200)]
     2018-11-07 11:25:09 INFO  TheCakeThief:44 - maxDuffelBagValue: 110 with a capacity of 8 with cakes [Cake(weight=3, worth=40), Cake(weight=5, worth=70)]
     2018-11-07 11:25:09 INFO  TheCakeThief:44 - maxDuffelBagValue: 120 with a capacity of 9 with cakes [Cake(weight=3, worth=40), Cake(weight=5, worth=70)]
+
      
 ---
