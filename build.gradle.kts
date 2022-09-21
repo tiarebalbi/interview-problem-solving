@@ -10,7 +10,7 @@ repositories {
 
 dependencies {
     implementation("org.apache.logging.log4j:log4j-core:2.17.1")
-    testImplementation(platform("org.junit:junit-bom:5.8.2"))
+    testImplementation(platform("org.junit:junit-bom:5.9.1"))
     testImplementation("org.junit.jupiter:junit-jupiter")
 }
 
